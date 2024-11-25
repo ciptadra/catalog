@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: backoffice
+  description: The backoffice sub-department
+spec:
+  type: sub-department
+  profile:
+    displayName: Backoffice
+    email: backoffice@example.com
+    # Intentional no picture for testing
+  parent: infrastructure
+  children: [product, project]

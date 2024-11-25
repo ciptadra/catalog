@@ -1,0 +1,44 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: marketing
+  description: Marketing
+spec:
+  type: team
+  profile:
+    # Intentional no displayName for testing
+    email: marketing@onebox.co.id
+    picture: https://api.dicebear.com/7.x/identicon/svg?seed=Fluffy&backgroundType=solid,gradientLinear&backgroundColor=ffd5dc,b6e3f4
+  parent: backstage
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: dinni
+spec:
+  profile:
+    email: dinni@ciptadrasoft.com
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Luna&backgroundColor=transparent
+  memberOf: [marketing]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: guest
+spec:
+  profile:
+    displayName: Guest User
+    email: guest@example.com
+  memberOf: [team-a]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: guest
+  namespace: development
+spec:
+  profile:
+    displayName: Guest User
+    email: guest@example.com
+  memberOf: [group:default/marketing]

@@ -1,0 +1,46 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: ciptadra
+  description: The ciptadra organization
+  links:
+    - url: http://www.ciptadrasoft.com/
+      title: Website
+spec:
+  type: organization
+  profile:
+    displayName: Ciptadra
+    email: dev@ciptadrasoft.com
+    picture: https://api.dicebear.com/7.x/identicon/svg?seed=Maggie&flip=true&backgroundColor=ffdfbf
+  children: [onebox]
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: onebox
+  description: The onebox organization
+  links:
+    - url: http://www.onebox.co.id/
+      title: Website
+spec:
+  type: organization
+  profile:
+    displayName: Onebox
+    email: dev@onebox.co.id
+    picture: https://api.dicebear.com/7.x/identicon/svg?seed=Maggie&flip=true&backgroundColor=ffdfbf
+  children: [infrastructure]
+---
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: example-groups
+  description: A collection of all Onebox Groups
+spec:
+  targets:
+    - ./infrastructure-group.yaml
+    - ./backoffice-group.yaml
+    - ./backstage-group.yaml
+    - ./quality-control-group.yaml
+    - ./infrastructure-group.yaml
+    - ./product-group.yaml
+    - ./project-group.yaml

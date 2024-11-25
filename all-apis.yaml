@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: example-apis
+  description: A collection of all Onebox APIs
+spec:
+  targets:
+    - ./apis/hello-world-api.yaml
+    - ./apis/hello-world-trpc-api.yaml
+    - ./apis/onecloud-api.yaml
+    - ./apis/onecloud-webhook-api.yaml
+    - ./apis/spotify-api.yaml
+    - ./apis/streetlights-api.yaml
+    - ./apis/swapi-graphql.yaml
+    - ./apis/wayback-archive-api.yaml
+    - ./apis/wayback-search-api.yaml

@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: onecloud-db
+  description: Stores onecloud data
+spec:
+  type: database
+  owner: onebox
+  system: onecloud-system
